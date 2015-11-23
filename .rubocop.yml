@@ -1,0 +1,53 @@
+AllCops:
+  Exclude:
+    # Because these are vendor files.
+    - 'node_modules/**/*'
+
+Metrics/AbcSize:
+  Exclude:
+    # TODO
+    - 'lib/sequenceserver.rb'
+Metrics/MethodLength:
+  # Because 15 lines in a method is just about as good as 10 (default). And we
+  # have a couple that can't be helped.
+  Max: 15
+  Exclude:
+    # TODO:
+    - 'lib/sequenceserver.rb'
+Metrics/ModuleLength:
+  Exclude:
+    # TODO:
+    #   Revisit later.
+    - 'lib/sequenceserver.rb'
+    - 'spec/blast_spec.rb'
+Metrics/ClassLength:
+  Exclude:
+    # TODO:
+    #   Evaluate whether to make class smaller or to increase 'Max'.
+    - 'lib/sequenceserver/database.rb'
+Metrics/BlockNesting:
+  Exclude:
+    # TODO:
+    #   Fix in bin/sequenceserver and re-enable.
+    - 'bin/sequenceserver'
+
+Style/UnlessElse:
+  # TODO:
+  #   Fix in bin/sequenceserver and re-enable.
+  Enabled: false
+Style/ClassAndModuleCamelCase:
+  Exclude:
+    # TODO:
+    #   Revisit later.
+    - 'lib/sequenceserver/exceptions.rb'
+Style/Lambda:
+  Exclude:
+    # Because we support 1.8.7.
+    - '**/*.rb'
+Style/EachWithObject:
+  Exclude:
+    # Because we support 1.8.7.
+    - '**/*.rb'
+Style/HashSyntax:
+    # Because we support 1.8.7.
+  EnforcedStyle: hash_rockets
