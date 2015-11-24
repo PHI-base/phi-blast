@@ -10,6 +10,7 @@ module SequenceServer
 
     NCBI_ID_PATTERN    = /gi\|(\d+)\|/
     UNIPROT_ID_PATTERN = /sp\|(\w+)\|/
+    PHIBASE_ACC_PATTERN = /PHI:(\d+)\|/
 
     # Link generators return a Hash like below.
     #
@@ -115,6 +116,20 @@ module SequenceServer
         :icon  => 'fa-external-link'
       }
     end
+
+    def phibase
+      return nil unless id.match(PHIBASE_ACC_PATTERN)
+      phibase_acc = Regexp.last_match[1]
+      phibase_acc = encode phibase_acc
+      url = "http://www-phi4.phibase.org/searchFacet.htm?queryTerm=PHI:#{phibase_acc}"
+      {
+        :order => 2,
+        :title => 'PHI-base',
+        :url   => url,
+        :icon  => 'fa-external-link'
+      }
+    end
+
   end
 end
 
