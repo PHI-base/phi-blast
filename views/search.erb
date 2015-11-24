@@ -5,13 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>SequenceServer: Custom BLAST Server</title>
+  <title>PHI-BLAST</title>
+  <meta name="author" content="Alistair Irvine">
   <meta name="author" content="Anurag Priyam">
   <meta name="author" content="Ben J. Woodcroft">
   <meta name="author" content="Vivek Rai">
   <meta name="author" content="Cedric Wurm">
   <meta name="author" content="Yannick Wurm">
-  <meta name="description" content="Custom BLAST server provided by SequenceServer (http://www.sequenceserver.com)"/>
+  <meta name="description" content="BLAST server based on the Pathogen Host Interaction database (PHI-base, www.phi-base.org), based on SequenceServer (http://www.sequenceserver.com)"/>
 
   <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -35,19 +36,23 @@
       class="container">
       <a
         class="navbar-brand"
-        href="http://sequenceserver.com" target="_blank">
-        SequenceServer
+        href="http://www-phi4.phibase.org">
+        <!-- href="http://sequenceserver.com" target="_blank"> -->
+        PHI-BLAST
         <small>
-          <%= SequenceServer::VERSION %>
+          The BLAST server for PHI-base
+          <!-- <%= SequenceServer::VERSION %> -->
         </small>
       </a>
       <ul class="nav navbar-nav navbar-right hover-reset focus-reset">
         <li>
           <a
-            target="_blank"
+            href="http://www-phi4.phibase.org">
+            Back to PHI-base
+            <!-- target="_blank"
             href="http://www.sequenceserver.com/#support">
             <i class="fa fa-comment-o"></i>
-            Help &amp; Support
+            Help &amp; Support -->
           </a>
         </li>
       </ul>
@@ -118,7 +123,8 @@
     <noscript>
       <div
         class="nojs-error">
-        <h3>SequenceServer can't work without JavaScript.</h3>
+        <!-- <h3>SequenceServer can't work without JavaScript.</h3> -->
+        <h3>PHI-BLAST can't work without JavaScript.</h3>
         <ul>
           <li>Please see if you can enable JavaScript in your browser's preferences.</li>
           <li>If your browser doesn't support JavaScript, please consider upgrading to the latest version or using Firefox or Chrome.</li>
@@ -278,38 +284,10 @@
     <hr>
     <p
       class="text-center">
-      <a
-        href='http://www.sequenceserver.com'>
-        <%=
-          quote = [
-            "Custom BLAST web interface by SequenceServer.",
-            "SequenceServer: Local BLAST with bespoke html interface.",
-            "Set up custom BLAST interface with SequenceServer.",
-            "Easy BLASTing with SequenceServer.",
-            "Run BLAST locally with Sequenceserver.",
-            "BLAST against a custom, local database with SequenceServer.",
-            "Run BLAST locally on Mac OSX with SequenceServer.",
-            "Run BLAST locally on Ubuntu with SequenceServer.",
-            "Run BLAST locally on Linux with SequenceServer."
-          ][rand(9)]
-        %>
-      </a>
-      <a
-        class="twitter-share-button"
-        href="https://twitter.com/share"
-        data-url="http://www.sequenceserver.com" data-text="<%= quote %>" data-via="yeban" data-hashtags="bioinformatics">
-        Tweet
-      </a>
-      <%#<div class="g-plusone" data-annotation="none" data-href="http://www.sequenceserver.com"></div>%>
-
-      <br>
-      Please Cite:
-      <a href='http://www.sequenceserver.com'>
-        Priyam, Woodcroft, Rai & Wurm, <strong>SequenceServer</strong> (<em>in prep</em>)
-      </a>
-      &amp; relevant data sources.
+      PHI-BLAST is a custom BLAST tool based on <a href='http://www.sequenceserver.com'><strong>SequenceServer</strong></a>
     </p>
   </div>
+
 
   <div
     id="error"
@@ -337,9 +315,10 @@
 
           <p>
             Please try again
-            later, or report to the admin or <a
-              href="https://groups.google.com/forum/?fromgroups#!forum/sequenceserver">SequenceServer
-              Google Group</a> (if you are the admin) if problem persists.
+            later, or report to <a href="mailto:contact@phi-base.org">PHI-base Helpdesk</a> if problem persists.
+            <!--later, or report to the admin or <a
+              href="contact@phi-base.org https://groups.google.com/forum/?fromgroups#!forum/sequenceserver">SequenceServer
+              Google Group</a> (if you are the admin) if problem persists. -->
           </p>
         </div>
 
