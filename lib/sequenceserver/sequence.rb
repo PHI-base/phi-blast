@@ -128,7 +128,8 @@ module SequenceServer
           return @filename if @filename
           name = sequence_ids.first            if sequence_ids.length == 1
           name = "#{sequence_ids.length}_hits" if sequence_ids.length >= 2
-          @filename = "sequenceserver-#{name}.fa"
+          @filename = "PHI-BLAST-#{name}.fa"
+          #@filename = "sequenceserver-#{name}.fa"
         end
 
         # Returns mime type to use if this file were to be transferred over
@@ -228,9 +229,7 @@ from the following databases:
 but we found #{sequences.length} sequence(s).
 
 This is likley due to a problem with how databases are formatted.
-Please share this text with the person managing this website (or
-https://groups.google.com/forum/?fromgroups#!forum/sequenceserver
-if you are the admin) so that the issue can be resolved.
+Please share this text with the PHI-base Helpdesk at contact@phi-base.org so that the issue can be resolved.
 
 If any sequences were retrieved, you can find them below
 (but some may be incorrect, so be careful!)

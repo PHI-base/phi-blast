@@ -30,7 +30,8 @@ module SequenceServer
 
       def filename
         @filename ||=
-          "sequenceserver-#{type}_report.#{mime}"
+          "PHI-BLAST-#{type}_report.#{mime}"
+          #"sequenceserver-#{type}_report.#{mime}"
       end
 
       private

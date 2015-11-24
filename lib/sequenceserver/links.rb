@@ -10,7 +10,7 @@ module SequenceServer
 
     NCBI_ID_PATTERN    = /gi\|(\d+)\|/
     UNIPROT_ID_PATTERN = /sp\|(\w+)\|/
-    PHIBASE_ACC_PATTERN = /PHI:(\d+)\|/
+    PHIBASE_ACC_PATTERN = /PHI:(\d+)#/
 
     # Link generators return a Hash like below.
     #
